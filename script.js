@@ -1,9 +1,9 @@
-jQuery(document).ready(function() {
-  const $landing = jQuery('#home-landing');
-  const $pupilLeft = jQuery('.pupil.left');
-  const $pupilRight = jQuery('.pupil.right');
-  const $cloudFront = jQuery('.cloud-front');
-  const $cloudBack = jQuery('.cloud-back');
+$(document).ready(function() {
+  const $landing = $('#home-landing');
+  const $pupilLeft = $('.pupil.left');
+  const $pupilRight = $('.pupil.right');
+  const $cloudFront = $('.cloud-front');
+  const $cloudBack = $('.cloud-back');
 
   const canvasHeight = $landing.height();
   const canvasWidth = $landing.width();
@@ -32,22 +32,5 @@ jQuery(document).ready(function() {
     $cloudFront.css({ transform: `translateX(${x / 40}%)` });
     // $cloudBack.css({ transform: `translateX(${x / 150}%)` });
     // console.log(event.pageX, event.pageY);
-  });
-
-  // Gallery
-  jQuery('.filter-button-group').on('click', 'button', function() {
-    var filterValue = jQuery(this).attr('data-filter');
-    jQuery('.grid').isotope({ filter: filterValue });
-  });
-
-  jQuery('.grid').isotope({
-    filter: '*',
-    // set itemSelector so .grid-sizer is not used in layout
-    itemSelector: '.grid-item',
-    percentPosition: true,
-    masonry: {
-      // use element for option
-      columnWidth: '.grid-item'
-    }
   });
 });
