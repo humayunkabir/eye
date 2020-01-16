@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+#home-landing {
+  position: relative;
+}
+img.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+.pupil {
+  position: absolute;
+  z-index: -1;
+  transition: all 0.2s ease-out;
+}
+.pupil.left {
+  left: 37%;
+  top: 41.3%;
+  width: 1.85%;
+}
+.pupil.right {
+  left: 44.5%;
+  top: 40.4%;
+  width: 1.4%;
+}
+.landing-banner {
+  position: relative;
+}
+.landing-man,
+.cloud-front,
+.cloud-back {
+  position: absolute;
+}
+.landing-man {
+  bottom: 0;
+  left: 13%;
+  width: 52%;
+  z-index: 1;
+}
+.cloud-front {
+  top: 0;
+  left: 12%;
+  width: 45%;
+}
+.cloud-back {
+  bottom: 20%;
+  position: absolute;
+  background-size: contain;
+  width: 100%;
+  height: 15%;
+  background-image: url(./img/cloud-back.png);
+  background-position: 0px;
+  background-repeat: repeat-x;
+  animation: cloud 10s infinite linear;
+}
+
+@media (min-width: 1300px) {
+  .container {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes cloud {
+  from {
+    background-position: 0;
+  }
+  to {
+    background-position: 100%;
+  }
+}
